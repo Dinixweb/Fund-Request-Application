@@ -79,7 +79,7 @@
                                                         </div>
                                                  
                                                          
-                                                         <button type="submit" onclick="checkUserExist()" class="btn btn-primary">Add User</button>
+                                                         <button type="submit"  class="btn btn-primary">Add User</button>
                                                         <input type="hidden" name="form" value="adduseraccountoperation"/>                                             
                                               </form>
                                               </div>

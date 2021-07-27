@@ -36,9 +36,17 @@ public class ApplicationModel {
 				fundRequest.add(new FundData(rs.getString("amount")));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} 
+		finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+			
+				e.printStackTrace();
+			}
+		}
 		return fundRequest;
 
 	}
@@ -62,6 +70,13 @@ public class ApplicationModel {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}	finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return rejectedFund;
@@ -88,6 +103,14 @@ public class ApplicationModel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+		finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 		return approvedFund;
 
@@ -114,6 +137,14 @@ public class ApplicationModel {
 		catch (SQLException x) {
 
 		} 
+		finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 		return disbursedFund;
 
@@ -142,12 +173,10 @@ public class ApplicationModel {
 		finally {
 			try {
 				conn.close();
-				pst.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		}
 
 	}
@@ -172,12 +201,10 @@ public class ApplicationModel {
 		finally {
 			try {
 				conn.close();
-				pst.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		}
 
 	}
@@ -203,12 +230,10 @@ public class ApplicationModel {
 		finally {
 			try {
 				conn.close();
-				pst.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		}
 
 	}
@@ -234,12 +259,10 @@ public class ApplicationModel {
 		finally {
 			try {
 				conn.close();
-				pst.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		}
 
 	}
@@ -260,6 +283,14 @@ public class ApplicationModel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+		finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 
 	}
@@ -281,6 +312,14 @@ public class ApplicationModel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+		finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 
 	}

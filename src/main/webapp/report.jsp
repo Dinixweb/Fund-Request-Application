@@ -107,6 +107,7 @@
 																out.print("<td>" + approvedFunds.get(i).getPurpose() + "</td>");
 																out.print("<td>" + approvedFunds.get(i).getRequestDate() + "</td>");
 																out.print("<td>" + approvedFunds.get(i).getUserName() + "</td>");
+																out.print("<tr>");
 															}
 															%>
                                                         </tr>
@@ -190,7 +191,7 @@
 																out.print("<td>" + disbursedFunds.get(i).getPurpose() + "</td>");
 																out.print("<td>" + disbursedFunds.get(i).getRequestDate() + "</td>");
 																out.print("<td>" + disbursedFunds.get(i).getUserName() + "</td>");
-
+																out.print("<tr>");
 															}
 															%>
                                                         </tr>

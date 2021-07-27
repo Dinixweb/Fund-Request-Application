@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -24,7 +25,10 @@ public class userAccountModel {
 	
 	public void addUser(DataSource dataSource, UserData addUser){
 		
+		
+			
 		try {
+		
 					
 			conn=dataSource.getConnection();
 			
@@ -33,13 +37,13 @@ public class userAccountModel {
 			
 			pst = conn.prepareStatement(query);
 			
+			
 			pst.setString(1, addUser.getFirstname());
 			pst.setString(2, addUser.getLastname());
 			pst.setString(3, addUser.getEmail());
 			pst.setString(4, addUser.getPassword());
 			pst.setString(5, addUser.getDepartment());
-			
-			
+	
 			pst.execute();
 			
 	
